@@ -1,0 +1,36 @@
+.painel{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding-left: 140px;
+    width: 400px;
+    height: 350px;
+    border: 5px solid rgba(7, 7, 11, 0.501);
+    border-radius: 20px;
+    background-color: rgba(0, 128, 255, 0.414);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: url(https://img.elo7.com.br/product/original/257086E/painel-2x1-wifi-ralph-lona.jpg);
+    color: rgb(251, 253, 255);
+}
+
+button{
+    border-radius: 5px;
+    color: blue;
+    background-color: rgb(248, 245, 245);
+    height: 30px;
+}
+
+#cep{
+    border-radius: 10px;
+    height: 25px;
+    text-align: center;
+    border-color: blue;
+}
+
+button:hover{
+    background-color: rgb(9, 8, 9);
+    color: rgb(26, 100, 238);
+
+}

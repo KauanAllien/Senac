@@ -1,0 +1,22 @@
+#gameCanvas{
+    border: solid 1px black;
+    width: 800px;
+    height: 600px;
+    background-color: aliceblue;
+    margin-top: 45px;
+}
+
+.painel{
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    margin: 40px auto;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Phatone', sans-serif;
+}
+    
+body{
+    background-image:url(https://rare-gallery.com/uploads/posts/1000949-video-games-pixel-art-text-retro-games-pixels-Atari-Aztec-brand-line-screenshot-black-and-white-monochrome-photography-font.png);
+}
+

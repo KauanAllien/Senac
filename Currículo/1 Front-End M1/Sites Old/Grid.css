@@ -1,0 +1,28 @@
+.Item{
+    background-color: rgba(245, 42, 6, 0.735);
+    margin: 5px;
+    font-size:  20px;
+    text-align: center;
+    background-image:url(https://www.shutterstock.com/image-photo/grunge-metal-background-black-yellow-260nw-270186128.jpg);
+    border-radius: 20px;
+}
+
+.coluna{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.linha{
+    grid-template-rows: 150px 250px 250px 250px;
+}
+
+body{
+    background-color: rgb(12, 13, 12);
+    font-family: sans-serif;
+}
+
+.foto{
+    border-radius: 50%;
+    border:10px solid rgba(12, 54, 241, 0.654);
+    margin-top: 10px;
+}

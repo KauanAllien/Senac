@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(250, 248, 248);
+}
+
+.fundo{
+    width: 100%;
+    height: calc(600px - 6px);
+    border-bottom:6px solid orange;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    background-attachment: fixed;
+    background-image: url(https://www.vmware.com/content/dam/digitalmarketing/vmware/en/images/thumbnails/vmw-cloud-cost-management.jpeg);
+   
+}
+
+.Avião{
+    width: 350px;
+    position: absolute;
+    right: -200px;
+    padding-top: 400px;
+}
+
+.card{
+    margin-bottom: 50px;               
+    box-shadow: 2px 2px 20px black;
+    transition: 2s;
+    height: 465px;
+}
+
+.card:hover{
+    width: 20rem !important;
+    transition: 2s;
+}
+
+.carousel{
+    box-shadow: 2px 2px 30px black;
+}
+
+.Thunder{
+    color: aliceblue;
+    padding-top: 30px;
+    border-top: 5px solid orange;
+    padding-bottom: 30px;
+}
+a{
+    color: aliceblue !important;
+}
+
+.img-fluid{
+    border-radius: 10px !important;
+    box-shadow: 2px 2px 20px black;
+    margin-bottom: 30px;
+
+}
+
+.img-fluid:hover{
+    filter: grayscale(100%);
+    transition: 2s;
+}
+
+.preço{
+    font-size: 20px !important;
+   padding-top: 9px !important;
+   padding-bottom: 17px !important;
+}

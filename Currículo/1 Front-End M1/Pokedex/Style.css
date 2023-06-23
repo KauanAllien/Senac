@@ -1,0 +1,64 @@
+body{
+    background-image: url(https://pt.jugomobile.com/wp-content/uploads/2021/12/O-desenvolvedor-de-Pokemon-Go-Niantic-vale-mais-do-que.jpg);
+   
+    text-align: center;
+}
+
+#Painel{
+    border: solid rgb(247, 242, 242);
+    border-radius: 10px;
+    height: 650px;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(251, 10, 10);
+    color: rgb(246, 244, 244);
+    box-shadow: 15px 15px 5px rgb(13, 13, 13);
+    font-family: cursive;
+}
+
+
+.ss{
+    font-family: 'Pokemon Solid', sans-serif;
+    color: rgb(247, 247, 243);
+    margin-top: 5px;
+}
+
+
+button{
+    border-radius: 5px;
+    color: rgb(255, 255, 252);
+    background-color: rgb(12, 12, 12);
+    font-size: 17px;
+    font-family: fantasy;
+}
+
+#entrada{
+    font-size: 15px;
+    border-radius: 5px;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pokémon{
+    width: 170px;
+    height: 170px;
+    border: 2px solid rgb(249, 249, 247);
+    background-color: rgb(14, 13, 13);
+    border-radius: 15px;
+    
+    
+}
+
+#tela{
+    border: 10px solid white;
+    border-radius: 10px;
+    background-color: gray;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+   
+}
+
+.baba{
+    padding-top: 10px;
+}

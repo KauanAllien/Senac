@@ -1,0 +1,69 @@
+.foto {
+    border: 10px solid rgb(15, 14, 14);
+    border-radius: 100%;
+
+}
+
+body{
+    background-image: linear-gradient(to left,rgba(15, 15, 14, 0.985),rgb(34, 211, 246),rgba(12, 12, 11, 0.597));
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.menu{
+    background-color: rgba(17, 17, 17, 0.504);
+    border-radius: 10px;
+}
+
+.menu ul li{
+    display:inline;
+}
+
+.menu ul li a{
+    color:rgb(246, 246, 244);
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none; 
+}
+
+.menu ul li a:hover{
+    background-color: rgba(248, 246, 250, 0.212);
+    font-size: 20px;
+    border-radius: 20px;
+    transition-duration: 5s;
+}
+
+.tabela{
+    text-align: left;
+    background-color: rgb(26, 115, 249);
+    color: rgb(243, 237, 237);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 300px; 
+}   
+
+.tabela tr td:hover{
+    font-size: 20px;
+    color: rgb(34, 233, 12);   
+}
+.verde{
+    color:rgb(51, 247, 7);
+    font-family:'Times New Roman', Times, serif
+} 
+
+.pagina{
+    color:rgb(18, 7, 180);
+    text-decoration: none;
+}
+
+.pagina:hover{
+    text-decoration: underline;
+    color:rgb(239, 232, 232);
+} 
+
+
+
+
+

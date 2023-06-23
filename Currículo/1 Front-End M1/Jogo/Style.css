@@ -1,0 +1,114 @@
+.quadrado{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    
+}
+
+.Jogo{
+    background-color: rgb(1, 1, 1);
+    color:rgb(245, 243, 243);
+    border-color: rgb(16, 16, 16);
+    margin: 20px auto;
+    border-radius: 7px;
+    border: 5px solid;
+}
+
+body{
+    background-image: url(https://thumbs.dreamstime.com/z/fundo-do-perigo-da-constru%C3%A7%C3%A3o-37786118.jpg);
+    font-family: fantasy;
+    text-align: center;
+}
+
+button{
+    background-color: rgb(240, 191, 12);
+    border-radius: 10px;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 25px;
+    margin: 10px;
+    border: 5px solid;
+}
+
+#Sword{
+    background:blue ;
+    border: 5px solid;
+}
+
+#Shield{
+    background: red;
+    border: 5px solid;
+}
+
+#Arrow{
+    background: yellow ;
+    border: 5px solid;
+}
+
+#F1{
+    background:green ;
+    border: 5px solid;
+}
+
+#F2{
+    background: Black;
+    border: 5px solid;
+}
+
+#F3{
+    background:Purple ;
+    border: 5px solid;
+}
+
+#Gold{
+    background: brown;
+    border: 5px solid;
+}
+
+#Silver{
+    background: Orange ;
+    border: 5px solid;
+}
+
+#Platinium{
+    background: Pink;
+    border: 5px solid;
+}
+
+span{
+    color: rgb(244, 7, 7);
+    font-size: 30px;
+}
+
+.Fire:hover{
+    background-color: red ;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+.Snake:hover{
+    background-color: rgb(14, 13, 13);
+    color: aliceblue;
+}
+
+#nome{
+    border-radius: 7px;
+    
+}
+
+#Lista{
+    color: rgb(249, 3, 3);
+}
+
+.container{
+    display: flex; 
+}
+
+label{
+    color: rgb(243, 8, 8);
+}
+
+
+

@@ -1,0 +1,37 @@
+.foto {  
+border: 10px solid rgb(12, 11, 11);
+    border-radius: 100%;
+
+}
+
+body{
+    background-image: linear-gradient(to left,rgb(247, 11, 11),rgb(241, 229, 10),rgb(8, 8, 8));
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.menu{
+    background-color: rgba(17, 17, 17, 0.504);
+    border-radius: 10px;
+}
+
+.menu ul li{
+    display: inline;
+}
+
+.menu ul li a{
+    color:rgb(251, 251, 247);
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none; 
+}
+
+.menu ul li a:hover{
+    background-color: rgba(239, 235, 242, 0.212);
+    font-size: 20px;
+    border-radius: 20px;
+    transition-duration: 5s;
+}

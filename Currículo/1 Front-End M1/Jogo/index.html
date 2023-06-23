@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Velha</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Java Script.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="esquerda">
+        <span id="jogador1"> </span>
+        <span> VS </span>
+        <span id="jogador2"></span>
+
+
+        <table class="Jogo" border="2">
+
+            <tr>
+                <td class="quadrado" id="Sword" onclick="jogar(this)"></td>
+                <td class="quadrado" id="Shield" onclick="jogar(this)"></td>
+                <td class="quadrado" id="Arrow" onclick="jogar(this)"></td>
+            </tr>
+
+            <tr>
+                <td class="quadrado" id="F1" onclick="jogar(this)"></td>
+                <td class="quadrado"  id="F2"onclick="jogar(this)"></td>
+                <td class="quadrado"  id="F3" onclick="jogar(this)"></td>
+            </tr>
+
+            <tr>
+                <td class="quadrado" id="Gold"  onclick="jogar(this)"></td>
+                <td class="quadrado" id="Silver" onclick="jogar(this)"></td>
+                <td class="quadrado" id="Platinium" onclick="jogar(this)"></td>
+            </tr>
+
+
+        </table>
+        
+        <button  class="Fire"  onclick="gerarBatalha()">Gerar Batalha</button>
+
+        <button class="Fire" onclick="reiniciar()"> Reiniciar </button>
+    </div>
+
+        <div class="direita">
+            <label for="">Nome:</label>
+            <input type="text" id="nome">
+
+            <button class="Snake" onclick="adicionar()"> Adicionar </button>
+
+                <ul id ="Lista">
+                    
+                </ul>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div> 
+
+
+
+
+
+
+</body>
+</html>

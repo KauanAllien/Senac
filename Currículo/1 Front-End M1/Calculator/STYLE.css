@@ -1,0 +1,41 @@
+.Painel{
+    border: 2px solid rgb(8, 8, 8);
+    border-radius:10px;
+    width:400px;
+    height: 350px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    background-color: rgba(245, 245, 243, 0.099);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+}
+
+input{
+    border-radius:10px;
+    height: 30px;
+    text-align: center;
+}
+
+button{
+    background-color:rgb(7, 7, 6) ;
+    color: rgb(254, 254, 254);
+    border-radius: 5px;
+    border-color: rgb(245, 243, 243);
+    
+}
+
+#Resultado{
+    font-size: 50px;
+    color: rgb(9, 10, 8);
+    font-weight: bold;
+}
+
+body{
+    background-image: url(https://w.wallha.com/ws/13/vDQxeogk.jpg);
+}
+
+button:hover{
+    background-color: blueviolet;
+    color: chartreuse;
+}

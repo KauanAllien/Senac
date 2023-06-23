@@ -1,0 +1,36 @@
+body{
+    background-image: url(https://img.freepik.com/fotos-premium/belo-fundo-de-rosas-vermelhas-com-folhas-verdes-ia-generativa_444390-19925.jpg?w=2000);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    
+    
+}
+
+.painel{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(20, 2, 2, 0.703);
+    border-radius: 15px;
+    /* padding-left: 50px; */
+    margin: auto;
+    border: solid rgb(241, 2, 42);
+    color: aliceblue;
+    
+}
+
+.botao{
+    background-color: rgb(28, 236, 9);
+    color: rgb(18, 17, 17);
+    border: none;
+    height: 25px;
+    width: 45px;
+    border-radius: 5px;
+    
+}
+
+.botao:hover{
+    background-color: rgb(237, 6, 152);
+    color: azure;
+    
+}

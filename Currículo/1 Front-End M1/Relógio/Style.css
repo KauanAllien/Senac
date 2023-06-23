@@ -1,0 +1,67 @@
+.Painel{
+    border: 1px solid black;
+    height: 300px;               
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgb(249, 249, 255);
+    margin: 100px auto;
+    font-size: 65px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(green,rgb(16, 16, 131));
+    color: rgb(200, 206, 212);
+    border: solid rgb(2, 1, 1) 10px;
+}
+
+body{
+    background-image: url(https://i.pinimg.com/originals/15/13/fa/1513fa3bbdfb47de7cba42bdbca70650.jpg);
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    
+}
+
+h1{
+    color: aliceblue;
+}
+
+#relogio{
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(251, 248, 248);
+    border-radius: 50%;
+    position: relative;
+    margin: 50px auto;
+}
+
+#ponteiroHora{
+    background-color: black;
+    position: absolute;
+    transform-origin: bottom center;
+    width: 6px;
+    height: 60px;
+    top: 35px;
+    left: 98px;
+
+}
+
+#ponteiroMin{
+    background-color: rgb(250, 237, 6);
+    position: absolute;
+    transform-origin: bottom center;
+    width: 4px;
+    height: 90px;
+    top: 15px;
+    left: 98px;
+}
+
+#ponteiroSeg{
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    transform-origin: bottom center;
+    width: 2px;
+    height: 100px;
+    left: 98px;
+    top: 5px;
+
+}

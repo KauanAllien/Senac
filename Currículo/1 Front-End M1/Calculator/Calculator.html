@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+    <div class="Painel">
+
+        <h1>Calculadora</h1>
+        <p> Digite um Número</p>
+        <input type="number" id="N1" placeholder="digite o primeiro número">
+        <p>Digite outro Número:</p>
+        <input type="number" id="N2" placeholder="digite o segundo número">
+
+        <br><br>
+
+        <button onclick="Somar()">Somar</button>
+        <button onclick="Subtrair()">Subtrair</button>
+        <button onclick="Multiplicar()">Multiplicar</button>
+        <button onclick="Dividir()">Dividir</button>
+        <button onclick="Limpar()">Limpar</button>
+        
+
+        <div id="Resultado">NaN</div>
+
+    </div>
+
+    <script src="JavaScript.js"></script>
+</body>
+</html>
