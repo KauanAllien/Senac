@@ -6,17 +6,42 @@ var desenho = canvas.getContext("2d");
 var raqueteAltura = 10;                      //Altura da Raquete
 var raqueteLargura = 75;                    //Largura da Raquete
 var raqueteX = (canvas.width - raqueteLargura) / 2; //centralizar raquete
-var velocidadeRaquete = 7;
+var velocidadeRaquete = 14;
 
 //Configurar a Bola//
-var bolaRadius = 10 ;
+var bolaRadius = 10;
 var bolaX = canvas.width / 2;
 var bolaY = canvas.height - 30;                      
-var bolaDX = 2;                                            //direção da bola em X (esquerda/direita)
-var bolaDY = -2;                                           //direção da bola em Y (acima/baixo)
+var bolaDX = 7;                                            //direção da bola em X (esquerda/direita)
+var bolaDY = -7;                                           //direção da bola em Y (acima/baixo)
+
+var tijolosPorLinha = 5;
+var tijolosPorColuna = 8;
+var TijoloLargura = 60;
+var TijoloAltura = 20;
+var TijoloEspacamento = 10;
+var EspacamentoSuperiorQuadro = 30;
+var EspacamentoEsquerdoQuadro = 30;
+var Tijolos = [];              //Lista de Tijolos
+
+//Dedicado apenas a inicialização dos tijolos
+for( var coluna=0; coluna < tijolosPorColuna; coluna++  ){
+    Tijolos[coluna] = []   //012345
+
+    for(var linha=0; linha < tijolosPorLinha; linha++ ){
+        Tijolos[coluna][linha] = {x:0, y:0, ativo:1 }
+        //X é a posição esquerda/direita no canva
+        //Y é a posição acima/abaixo no canva
+        //Ativo, determina se o tijolo aparece ou não, 1 ou 0
+    }
+}
+
+
 
 var setaDireita = false;                                    //Comando para a raquete se mover para direita 
 var setaEsquerda = false;                                   //Comando para a raquete se mover para esquerda
+
+
 
 // Criação de Movimentação da Raquete//
     document.addEventListener("keydown", descerDaTecla);
@@ -28,13 +53,21 @@ var setaEsquerda = false;                                   //Comando para a raq
             setaDireita = true; //Ativa variável setaDireita
 
         // Se o valor = "esquerda" || ou valor = "setaEsquerda"
-        }else if(Tecla.key === "left" || Tecla.key === "Arrowleft")
+        }else if(Tecla.key === "Left" || Tecla.key === "ArrowLeft"){
             setaEsquerda = true; //Ativa o valor setaEsquerda
-    }
+    
+        }
+    }            
 
+    function subirDaTecla(Tecla){
+        //Se o valor = "direita" || ou valor = "setaDireita" 
+        if(Tecla.key === "Right" || Tecla.key === "ArrowRight"){
+            setaDireita = false; //Ativa variável setaDireita
 
-    function subirDaTecla(){
-
+        // Se o valor = "esquerda" || ou valor = "setaEsquerda"
+        }else if(Tecla.key === "Left" || Tecla.key === "ArrowLeft"){
+            setaEsquerda = false; //Ativa o valor setaEsquerda
+        }
     }
 
 function desenharRaquete(){
@@ -43,22 +76,102 @@ function desenharRaquete(){
     desenho.fillStyle = "yellow";
     desenho.fill();
     desenho.closePath();
+    
+
+}
+
+function desenharBola(){
+    desenho.beginPath();
+    desenho.arc(bolaX, bolaY, bolaRadius, 0, Math.PI * 2);
+    desenho.fillStyle = "red";
+    desenho.fill();
+    desenho.closePath();
+}
+
+    function desenharTijolos(){
+        for(var coluna=0; coluna < tijolosPorColuna; coluna++){
+            for(var linha=0; linha < tijolosPorLinha; linha++){
+
+                if(Tijolos[coluna] [linha].ativo == 1){          //Verifica se Tijolo está ativo para desenhalo
+                    var TijoloX = (coluna * (TijoloLargura + TijoloEspacamento)+ EspacamentoEsquerdoQuadro);
+                    var TijoloY = (linha * (TijoloAltura + TijoloEspacamento)+ EspacamentoSuperiorQuadro);
+
+                    Tijolos[coluna] [linha].x = TijoloX;
+                    Tijolos[coluna] [linha].y = TijoloY;
+
+                    desenho.beginPath();
+                    desenho.rect(TijoloX,TijoloY,TijoloLargura,TijoloAltura);
+                    desenho.fillStyle = "Gold";
+                    desenho.fill();
+                    desenho.closePath();
+
+                }
+
+            }
+        }
+    }
 
 
-} 
+function detectarColisão(){
+    for(var coluna=0; coluna < tijolosPorColuna; coluna++){
+        for(var linha=0; linha < tijolosPorLinha; linha++){
+
+            var Tijolo = Tijolos[coluna] [linha];
+            if(Tijolo.ativo === 1){
+                if(bolaX > Tijolo.x
+                    && bolaX < Tijolo.x + TijoloLargura
+                    && bolaY > Tijolo.y
+                    && bolaY < Tijolo.y + TijoloAltura){
+                        bolaDY = -bolaDY;
+                        Tijolo.ativo = 0;
+                }
+            }
+        }        
+    }    
+}
 
 function desenhar(){
     desenho.clearRect(0 ,0 , canvas.width, canvas.height );           //limpar o frame anterior
     desenharRaquete();
+    desenharBola();
+    desenharTijolos();
+    detectarColisão();
+    
+
+        //Analisar colisão de eixo X, colisão do canto direito/esquerdo
+    if(bolaX + bolaDX > canvas.width - bolaRadius || bolaX + bolaDX < bolaRadius){
+        bolaDX = - bolaDX; //Inverte direção direita/esquerda
+    }
+
+    //Analisa colisão com parte de cima
+    if(bolaY + bolaDY < bolaRadius){
+        bolaDY = -bolaDY; //Inverte colisão ao bater em cima
+
+    }else if(bolaY + bolaDY > canvas.height - bolaRadius ){
+
+            //Se for maior que o começo da raquete e menor que o final da raquete
+        if(bolaX > raqueteX && bolaX < raqueteX + raqueteLargura){
+
+            bolaDY = -bolaDY;                                    //Inverte Direção
+
+        }else{
+            document.location.reload(); //reinicia
+        }
+    }
+
+
+
     //Se setaDireita estiver ativo && "e" raqueteX < largura dp canvas - raqueteLargura
     if(setaDireita === true && raqueteX < canvas.width - raqueteLargura){
         raqueteX = raqueteX + velocidadeRaquete;
+
         // Se setaEsquerda estiver ativo && "e" raqueteX > 0 "comeco do canvas"
     }else if(setaEsquerda && raqueteX > 0){
         raqueteX = raqueteX - velocidadeRaquete;
     }
 
-
+    bolaX = bolaX + bolaDX;                //Faz a bola andar para direita e para esquerda
+    bolaY = bolaY + bolaDY;                 //Faz a bola andar para cima e para baixo
 
     requestAnimationFrame(desenhar)                      //Atualizar à tela de forma suave
 }
