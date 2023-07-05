@@ -17,6 +17,49 @@
 }
     
 body{
-    background-image:url(https://rare-gallery.com/uploads/posts/1000949-video-games-pixel-art-text-retro-games-pixels-Atari-Aztec-brand-line-screenshot-black-and-white-monochrome-photography-font.png);
+    background-color: black;
+    text-align: center;
+}
+
+.GameOver{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 9999;
+    display: none;
+}
+
+.MensageGameOver{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    font-size: 50px;
+    font-family:'Phatone', sans-serif;
+    animation:  piscar 2s alternate infinite;
+}
+
+@keyframes piscar {
+    0%{ color:blue}
+    100%{ color: red;}
+}
+
+.Read{
+    width: 250px;
+    height: 65px;
+    text-align: center;
+    background-color: crimson;
+    color: aliceblue;
+    padding: 5px;
+    font-family:'Phatone', sans-serif;
+}
+
+#Screen{
+    margin: 0;
+    font-size: 20px;
 }
 
