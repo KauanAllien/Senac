@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    background-color: rgb(129, 135, 130);
+    color: aliceblue;
+}
+
+.Painel{
+    background-color: red;
+    border: solid rgb(8, 8, 8) 10px;
+    width: 600px;
+    min-height: 400px;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+}
+
+
+.weber{
+    width: 170px;
+    height: 50px;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#title{
+    width: 170px;
+    border: solid black;
+    height: 40px;
+    text-align: center;
+}
+
+#Autor{
+    width: 170px;
+    height: 40px;
+    border: solid black;
+    text-align: center;
+}
+
